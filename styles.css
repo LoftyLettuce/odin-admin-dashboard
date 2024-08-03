@@ -28,6 +28,14 @@ div
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 4fr repeat(3, 1fr);
 }
+.header-layout input
+{
+  grid-column: span 2;
+}
+.header-layout .small-widget
+{
+  grid-column: span 3;
+}
 .page-layout .sidebar-layout
 {
   grid-area: sidebar;
