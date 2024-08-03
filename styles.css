@@ -38,12 +38,20 @@ div
 {
   grid-area: main-content;
   display: grid;
-  grid-template-columns: repeat(2, 2fr) 1fr;
-  grid-template-rows: 3fr 1fr 1fr 2fr;
-  gap: 15px;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
   padding: 2%;
 }
-.item-3, .item-4, .item-5, .item-6
+.main-content-layout .projects
 {
-  grid-row: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+.main-content-layout .others
+{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
 }
