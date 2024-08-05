@@ -25,14 +25,51 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 4fr repeat(3, 1fr);
+  align-items: center;
+  gap: 15px;
+  padding:0 var(---padding-left-right) 0 var(---padding-left-right);
 }
-.header-layout input
+.header-layout .search-box
 {
   grid-column: span 2;
+  padding-left: 5%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 30fr;
+  gap: 15px;
+}
+.search-box input
+{
+  background-color: lightgray;
+  border: none;
+  border-radius: 30px;
+}
+.header-layout>svg
+{
+  width: 50%;
+  justify-self: end;
+}
+.header-layout>button
+{
+  border-radius: 30px;
+  color: white;
+  background-color: blue;
+  border: none;
+  width: 80%;
+  height: 50%;
 }
 .header-layout .small-widget
 {
   grid-column: span 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  align-items: center;
+  gap: 5%;
+}
+.small-widget svg:first-child
+{
+  justify-self: end;
+  width: 15%;
 }
 .page-layout .sidebar-layout
 {
@@ -76,8 +113,19 @@
 .projects>div
 {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  padding: 10%;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  padding: 2%;
+}
+.projects h1, .projects p
+{
+  font-size: 16px;
+  grid-column: span 4;
+}
+.projects svg
+{
+  width: 50%;
+  height: auto;
 }
 .main-content-layout .others
 {
@@ -90,4 +138,23 @@
   display: grid;
   grid-auto-flow: row;
   grid-auto-rows: 1fr;
+  padding: 2%;
+}
+.others .announcement
+{
+  align-items: end;
+}
+.announcement h3, .announcement p
+{
+  font-size: 10px;
+}
+.others .trending
+{
+  grid-template-columns: 1fr 4fr;
+  font-size: 16px;
+  column-gap: 15px;
+}
+.trending span
+{
+  justify-self: start;
 }
