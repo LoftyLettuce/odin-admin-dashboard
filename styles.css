@@ -21,6 +21,7 @@
 }
 .page-layout .header-layout
 {  
+  font-weight: 700;
   padding:1% var(---padding-left-right) 1% var(---padding-left-right);
   position: relative;
   z-index: 0;
@@ -43,6 +44,7 @@
 }
 .search-box input
 {
+  padding: 0.1em 1em;
   background-color: #dbeafe;
   border: none;
   border-radius: 30px;
@@ -58,8 +60,9 @@
   color: white;
   background-color: #3b82f6;
   border: none;
-  width: 80%;
-  padding: 5%;
+  padding: 0.8em 2em;
+  font-size: 16px;
+  justify-self: center;
 }
 .header-layout .small-widget
 {
@@ -73,6 +76,10 @@
 {
   justify-self: end;
   width: 15%;
+}
+.header-layout span>span
+{
+  font-size: 0.7em;
 }
 .page-layout .sidebar-layout
 {
@@ -102,12 +109,16 @@
 }
 .page-layout .main-content-layout
 {
+  ---header-font-size: 18px;
+  ---color: #9ca3af;
+  ---font-weight: 500;
   background-color: #eff6ff;
   grid-area: main-content;
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
   padding: 5% 2%;
+  font-weight: 600;
 }
 .main-content-layout .projects
 {
@@ -121,6 +132,7 @@
 {
   content: "Your Projects";
   position: absolute;
+  font-size: var(---header-font-size);
   top: -1.5em;
 }
 .projects>div
@@ -149,6 +161,12 @@
 {
   font-size: 16px;
   grid-column: span 4;
+}
+.projects p 
+{
+  font-size: 14px;
+  font-weight: var(---font-weight);
+  color: var(---color);
 }
 .projects svg
 {
@@ -179,6 +197,7 @@
 {
   content: "Announcement";
   position: absolute;
+  font-size: var(---header-font-size);
   top: -1.5em;
 }
 .announcement div
@@ -193,14 +212,19 @@
 }
 .announcement h3
 {
-  font-size: 12px;
+  font-size: 1.2em;
+}
+.announcement p
+{
+  color: var(---color);
+  font-weight: var(---font-weight);
 }
 .others .trending
 {
   background-color: white;
   border-radius: 10px;
   grid-template-columns: 1fr 3fr;
-  font-size: 12px;
+  font-size: 15px;
   column-gap: 15px;
   position: relative;
 }
@@ -208,6 +232,7 @@
 {
   content: "Trending";
   position: absolute;
+  font-size: var(---header-font-size);
   top: -1.5em;
 }
 .trending svg
@@ -217,4 +242,10 @@
 .trending span
 {
   justify-self: start;
+}
+.trending div>span:last-child
+{
+  color: var(---color);
+  font-weight: var(---font-weight);
+  font-size: 0.9em;
 }
